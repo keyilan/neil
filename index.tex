@@ -1,0 +1,70 @@
+\documentclass{article}
+
+\usepackage{footnote}
+\usepackage{lipsum}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+% total={170mm,257mm},
+ bottom=2.5cm,
+ left=2.5cm,
+ right=2.5cm,
+ top=2.5cm,
+ }
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}[
+  ItalicFont={Times New Roman Italic},
+  BoldFont={Times New Roman Bold}
+]
+
+\usepackage{adjustbox}
+\usepackage{xcolor,colortbl}
+
+\title{Title\footnote{Acknowledgements}\\~}
+
+\date{\today}
+
+\author{
+  \textit{Kellen Parker van Dam\\La Trobe University}
+}
+
+\begin{document}
+
+\makeatletter
+\renewcommand\normalsize{\@setfontsize\normalsize{12pt}{13pt}}
+\renewcommand\tiny{\@setfontsize\tiny{8pt}{9pt}}
+\renewcommand\scriptsize{\@setfontsize\scriptsize{9pt}{10pt}}
+\renewcommand\small{\@setfontsize\small{10pt}{11pt}}
+
+\normalsize  
+
+\begin{center}
+{\fontsize{13pt}{14pt}\selectfont\@title\par}
+\@author
+\end{center}
+
+\begin{table}[h]
+\begin{tabular}{|p{1.75cm}p{13,5cm}|}
+\hline
+\rowcolor[HTML]{FAD4B6} 
+\textbf{\scriptsize Abstract} & \scriptsize{\textit{Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. Integer tempus convallis augue. Etiam facilisis. Nunc elementum fermentum wisi. Aenean placerat. Ut imperdiet, enim sed gravida sollicitudin, felis odio placerat quam, ac pulvinar elit purus eget enim. Nunc vitae tortor. Proin tempus nibh sit amet nisl. Vivamus quis tortor vitae risus porta vehicula.}} \\
+\tiny{Citation} & \tiny{Smith, John. 2017. This is my title: This is my subtitle. North East Indian Linguistics (NEIL), 8. Canberra, Australian National University: Asia-Pacific Linguistics Open Access. issn: xxxx. doi: xxxxx.} \\
+\tiny{Volume Editors} & \tiny{Linda Konnerth, Stephen Morey, Amos Teo} \\
+\tiny{Copyright} & © \tiny{2017, the author(s), release under Creative Commons Attribution license} \\
+\tiny{URL} & \tiny{xxxxxxxx} \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Write the first heading here}
+
+\lipsum[1]
+
+\begin{quote} \small % current 12pt, maybe needs to be 10.
+\lipsum[2]
+\end{quote}
+
+\lipsum[3]
+
+\end{document}
