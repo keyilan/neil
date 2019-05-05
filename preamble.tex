@@ -23,6 +23,16 @@
 	top=2.5cm,
 }
 
+% trees
+\usepackage{tikz}
+\usetikzlibrary{trees, arrows}
+\usepackage{tikz-qtree,tikz-qtree-compat}
+\tikzstyle{level 1}=[level distance=2em, sibling distance=0.25cm]
+\tikzstyle{level 2}=[level distance=2em, sibling distance=0.25cm]
+\tikzstyle{level 3}=[level distance=2em, sibling distance=0.25cm]
+\tikzstyle{level 4}=[level distance=2em, sibling distance=0.25cm]
+\tikzstyle{level 5}=[level distance=2em, sibling distance=0.25cm]
+
 % fonts
 \usepackage{fontspec}
 \newfontfamily\tgtermes{TeX Gyre Termes}
@@ -136,12 +146,18 @@
     natbib=true,
     url=false, 
     doi=true,
-    eprint=false
+    eprint=false,
+    autocite=inline
 ]{biblatex}
 \addbibresource{references.bib}
 
 % bibliography patching
 \usepackage{xpatch}
+
+% formatting of \cite and \autocite
+\renewcommand\autocite[1]{(\citeauthor{#1} \citeyear{#1})}
+%\renewcommand\autocites[1]{(\citeauthor{#1} \citeyear{#1})}
+\renewcommand\cite[1]{\citeauthor{#1} (\citeyear{#1})}
 
 % temporary lorem ipsum generator
 \usepackage{lipsum}

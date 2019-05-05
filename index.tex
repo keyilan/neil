@@ -43,13 +43,35 @@ Tables should be centred on the page, with the \texttt{\textbackslash caption\{\
 
 Table \ref{tab:an} is using the \texttt{booktabs} style. This may need to be changed since it doesn't currently match the previous Word template design.
 
-Captions and centring  of figures are handled the same way:
+For syntax trees and other tree diagrams, use \texttt{tikzpicture} within a \texttt{figure} environment:
+
+\begin{figure}[htpb!]
+\centering
+\begin{tikzpicture}
+	\Tree
+	[.NP
+		[.Det the ]
+		[.N' 
+			[.N cat ]
+		]		]
+	]
+\end{tikzpicture}
+\caption{Sample figure}
+\label{firsttree}
+\end{figure}
+
+
+Images as figures can be done with the \texttt{graphicsx} package. The following is a png image showing a syntax tree. 
 
 \begin{figure}[htpb!]
   \centering
-    \includegraphics[width=0.25\textwidth]{fig}
-  \caption{A simple figure}
+    \includegraphics[width=5em]{fig}
+  \caption{This is an example of a figure}
 \end{figure}
+
+When using images for figures, be sure to set the width of the figure to an appropriate value. Captions and alignment of figures should be the same as for tables.
+
+Complex figures such as pitch contour diagrams may require additional packages. If such are needed, please contact the editors in order to make the necessary arrangements.
 
 \section{Glossing}
 
@@ -61,7 +83,7 @@ Glossing is handled with the \texttt{linguex} and \texttt{cgloss} packages. Abbr
 
 \section{Conclusion}
 
-\lipsum[3]
+After your conclusion, first list abbreviations (if any), and then references. Consult the references for the type of reference you need, e.g., a book \autocite{anderson2007munda}; a paper in a proceedings publication \autocite{delancey2002bodic}; a journal article \autocites{haokip2012thadou, peterson1998lai}; an unpublished manuscript \autocite{hyslop2010kurtop}; a dissertation \autocite{hyslop2011kurtop}; an edited volume \autocite{morey2008neil}; a chapter in an edited volume \autocite{peterson2003lai}; a conference presentation \autocite{post2008tani}; or a website \autocite{sadokpam2008meetei}.
 
 \section*{Abbreviations}
 
