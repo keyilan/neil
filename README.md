@@ -19,3 +19,9 @@ To clone to your local system, you must first have `git` installed. If you are a
 ## Editing `index.tex`
 
 It is important that you do not edit any of the files included in the template except `index.tex`, which holds the contents of your paper, and `references.bib` which contains all previously published works which your paper references.
+
+For a guide on how to write citations in `references.bib`, see [this helpful guide](https://www.economics.utoronto.ca/osborne/latex/BIBTEX.HTM).
+
+## Questions / Help
+
+For any questions regarding formatting or problems that you may be facing with LaTeX in relation to this template, please get in touch with us. Send a message to Kellen at xxx@xxx.xxx with a description of your problem so that we can help you with a solution.
