@@ -16,9 +16,11 @@ The easiest way to download the template is as a zip file. You can download the 
 
 To clone to your local system, you must first have `git` installed. If you are already familiar with `git`, simply clone the repo with `git clone https://github.com/keyilan/neils.git` and edit the files from there. Note that you will not be pushing any changes to the master branch.
 
-## Editing `index.tex`
+## Editing
 
 It is important that you do not edit any of the files included in the template except `index.tex`, which holds the contents of your paper, and `references.bib` which contains all previously published works which your paper references.
+
+### Editing references
 
 For a guide on how to write citations in `references.bib`, see [this helpful guide](https://www.economics.utoronto.ca/osborne/latex/BIBTEX.HTM).
 
