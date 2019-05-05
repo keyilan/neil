@@ -24,7 +24,7 @@
 
 \lipsum[6]
 
-Tables should be centred on the page, with the \texttt{\textbackslash caption\{\}} at the bottom.
+Tables should be centred on the page, with the \texttt{\textbackslash caption\{\}} at the bottom. Captions and alignment of figures should be the same as for table.
 
 \begin{table}[htpb!]
 	\centering
@@ -50,13 +50,13 @@ For syntax trees and other tree diagrams, use \texttt{tikzpicture} within a \tex
 \begin{tikzpicture}
 	\Tree
 	[.NP
-		[.Det the ]
+		[.Det a ]
 		[.N' 
-			[.N cat ]
+			[.N tree ]
 		]		]
 	]
 \end{tikzpicture}
-\caption{Sample figure}
+\caption{This is a figure made with \texttt{tikz}}
 \label{firsttree}
 \end{figure}
 
@@ -65,11 +65,11 @@ Images as figures can be done with the \texttt{graphicsx} package. The following
 
 \begin{figure}[htpb!]
   \centering
-    \includegraphics[width=5em]{fig}
-  \caption{This is an example of a figure}
+    \includegraphics[width=6em]{fig}
+  \caption{This is an image file}
 \end{figure}
 
-When using images for figures, be sure to set the width of the figure to an appropriate value. Captions and alignment of figures should be the same as for tables.
+When using images for figures, be sure to set the width of the figure to an appropriate value. The source image should also be high enough resolution that it does not look blurry when added to the document.
 
 Complex figures such as pitch contour diagrams may require additional packages. If such are needed, please contact the editors in order to make the necessary arrangements.
 
@@ -78,8 +78,10 @@ Complex figures such as pitch contour diagrams may require additional packages. 
 Glossing is handled with the \texttt{linguex} and \texttt{cgloss} packages. Abbreviations should be lowercase and contained in a \texttt{\textbackslash textsc\{\}} tag for small capital letters. The following is from van Dam (\citeyear{vandam2019syntax})
 
 \exg.   kaʔ\textsubscript{4} ko\textsubscript{2} nɤ\textsubscript{2} tə\textsubscript{0}-no\textsubscript{1} ʃɯu\textsubscript{1}\\
-		down towards {\textsc{prep}} {\textsc{caus}}-extend.horiz {\textsc{imp}}\\~\\
-		`point [something] downwards'
+		down towards {\textsc{prep}} {\textsc{caus}}-extend.horiz {\textsc{imp}} \\~\\
+		`point [something] downwards' \label{exg}
+
+References to examples/glossing are handled in the same way as figures, for example here referring to Example \ref{exg} above. The \texttt{\textbackslash label\{\}} tag can be placed on any line of the example.
 
 \section{Conclusion}
 
