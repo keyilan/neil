@@ -1,70 +1,77 @@
-\documentclass{article}
+\input{preamble}
 
-\usepackage{footnote}
-\usepackage{lipsum}
+% Do not change anything above this line
 
-\usepackage{geometry}
- \geometry{
- a4paper,
-% total={170mm,257mm},
- bottom=2.5cm,
- left=2.5cm,
- right=2.5cm,
- top=2.5cm,
- }
+\title{LaTeX Template for Publication in North East Indian Linguistics\footnote{Acknowledgements appear here.}}
 
-\usepackage{fontspec}
-\setmainfont{Times New Roman}[
-  ItalicFont={Times New Roman Italic},
-  BoldFont={Times New Roman Bold}
-]
+\author{Kellen Parker van Dam\\La Trobe University}
 
-\usepackage{adjustbox}
-\usepackage{xcolor,colortbl}
+\maketitle
 
-\title{Title\footnote{Acknowledgements}\\~}
-
-\date{\today}
-
-\author{
-  \textit{Kellen Parker van Dam\\La Trobe University}
-}
-
-\begin{document}
-
-\makeatletter
-\renewcommand\normalsize{\@setfontsize\normalsize{12pt}{13pt}}
-\renewcommand\tiny{\@setfontsize\tiny{8pt}{9pt}}
-\renewcommand\scriptsize{\@setfontsize\scriptsize{9pt}{10pt}}
-\renewcommand\small{\@setfontsize\small{10pt}{11pt}}
-
-\normalsize  
-
-\begin{center}
-{\fontsize{13pt}{14pt}\selectfont\@title\par}
-\@author
-\end{center}
-
-\begin{table}[h]
-\begin{tabular}{|p{1.75cm}p{13,5cm}|}
-\hline
-\rowcolor[HTML]{FAD4B6} 
-\textbf{\scriptsize Abstract} & \scriptsize{\textit{Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. Integer tempus convallis augue. Etiam facilisis. Nunc elementum fermentum wisi. Aenean placerat. Ut imperdiet, enim sed gravida sollicitudin, felis odio placerat quam, ac pulvinar elit purus eget enim. Nunc vitae tortor. Proin tempus nibh sit amet nisl. Vivamus quis tortor vitae risus porta vehicula.}} \\
-\tiny{Citation} & \tiny{Smith, John. 2017. This is my title: This is my subtitle. North East Indian Linguistics (NEIL), 8. Canberra, Australian National University: Asia-Pacific Linguistics Open Access. issn: xxxx. doi: xxxxx.} \\
-\tiny{Volume Editors} & \tiny{Linda Konnerth, Stephen Morey, Amos Teo} \\
-\tiny{Copyright} & © \tiny{2017, the author(s), release under Creative Commons Attribution license} \\
-\tiny{URL} & \tiny{xxxxxxxx} \\ \hline
-\end{tabular}
-\end{table}
+\abstract{Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. Integer tempus convallis augue. Etiam facilisis. Nunc elementum fermentum wisi. Aenean placerat. Ut imperdiet, enim sed gravida sollicitudin, felis odio placerat quam, ac pulvinar elit purus eget enim. Nunc vitae tortor.}
 
 \section{Write the first heading here}
 
 \lipsum[1]
 
-\begin{quote} \small % current 12pt, maybe needs to be 10.
-\lipsum[2]
+\begin{quote} % current 12pt, maybe needs to be 10.
+	This is a block quote, with an included citation \autocite{morey2018verbstemalternation}. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. Integer tempus convallis augue.
 \end{quote}
+
+\lipsum[5]
+
+\section{Tables \& Figures}
+
+Tables should be centred on the page, with the \texttt{\textbackslash caption\{\}} at the bottom.
+
+\begin{table}[htpb!]
+	\centering
+	\begin{tabular}{@{}lllll@{}}
+	\toprule
+	gloss & Needham & Marrison & Das Gupta & modern \\ \midrule
+	iron & yân & yan & -- & ʒan \\
+	plate &  & -- & -- & pan \\
+	cow & mân & -- & man & man \\
+	bracelet & sân & san & -- & san \\
+	bread & -- & -- & -- & βan \\ \bottomrule
+	\end{tabular}
+	\caption{The *an rhyme in Muishaung}
+	\label{tab:an}
+\end{table}
+
+Table \ref{tab:an} is using the \texttt{booktabs} style. This may need to be changed since it doesn't currently match the previous Word template design.
+
+Captions and centring  of figures are handled the same way:
+
+\begin{figure}[htpb!]
+  \centering
+    \includegraphics[width=0.25\textwidth]{fig}
+  \caption{A simple figure}
+\end{figure}
+
+\section{Glossing}
+
+Glossing is handled with the \texttt{linguex} and \texttt{cgloss} packages. Abbreviations should be lowercase and contained in a \texttt{\textbackslash textsc\{\}} tag for small capital letters. The following is from van Dam (\citeyear{vandam2019syntax})
+
+\exg.   kaʔ\textsubscript{4} ko\textsubscript{2} nɤ\textsubscript{2} tə\textsubscript{0}-no\textsubscript{1} ʃɯu\textsubscript{1}\\
+		down towards {\textsc{prep}} {\textsc{caus}}-extend.horiz {\textsc{imp}}\\~\\
+		`point [something] downwards'
+
+\section{Conclusion}
 
 \lipsum[3]
 
-\end{document}
+\section*{Abbreviations}
+
+\vspace{-1em} % for tables immediately following section titles
+\begin{table}[htpb!]
+    \begin{tabular}{ll}
+    \textsc{caus} & Causative prefix \\
+    \textsc{imp} & Imperative marker \\
+    \textsc{prep} & Preposition
+	\end{tabular}
+\end{table}
+
+% Do not change anything below this line
+
+\input{backmatter}

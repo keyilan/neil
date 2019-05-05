@@ -1,0 +1,23 @@
+
+% DO NOT CHANGE THIS FILE.
+
+% This file contains all the formatting information required
+% to make your document fit the necessary style requirements.
+% Any changes you make to this file will be over-written at
+% the time of submission. If for any reason you feel it is
+% necessary to make changes to this, such as a missing package,
+% please contact the editors of North East Indian Linguistics
+% to discuss the suggested changes.
+
+% DO NOT MAKE ANY CHANGES WITHOUT APPROVAL FROM THE EDITORS.
+
+\xpatchbibmacro{date+extrayear}{
+  \printtext[parens]%
+}{
+  \setunit{\addperiod\space}
+  \printtext
+}{}{}
+
+\printbibliography
+
+\end{document}
