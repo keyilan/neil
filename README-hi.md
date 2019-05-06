@@ -1,1 +1,1 @@
-# North East Indian Linguistics Society
+# पूर्वोत्तर भारत भाषाविज्ञान सोसाइटी के लिए LaTeX टेम्पलेट
