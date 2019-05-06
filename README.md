@@ -76,6 +76,10 @@ When possible, use `tikz` for trees.
 \end{table}
 ````
 
+#### Fonts
+
+The main font used in the template is Times New Roman. Due to missing glyphs, an additional font, TeX Gyre Termes, is also used. To be certain that your paper is being formatted correctly, please ensure that you have installed TeX Gyre Termes on your system, especially if you are encountering problems with missing characters/glyphs/letters in your text. A zip file of this font is included in this repository, and will be downloaded when you download the template as described above.
+
 ## Questions / Help
 
 For any questions regarding formatting or problems that you may be facing with LaTeX in relation to this template, please get in touch with us. Send a message to Kellen at xxx@xxx.xxx with a description of your problem so that we can help you with a solution.
