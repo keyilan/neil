@@ -57,6 +57,25 @@ When possible, use `tikz` for trees.
 \end{figure}
 ````
 
+#### Tables
+
+````latex
+\begin{table}[htpb!]
+    \centering
+    \begin{tabular}{@{}lllll@{}}
+    \toprule
+    gloss		& Needham	& Marrison	& Das Gupta	& modern \\ \midrule
+    iron		& yân		& yan 		& -- 		& ʒan \\
+    plate		& ~			& -- 		& -- 		& pan \\
+    cow			& mân		& -- 		& man 		& man \\
+    bracelet	& sân		& san 		& -- 		& san \\
+    bread		& --		& -- 		& -- 		& βan \\ \bottomrule
+    \end{tabular}
+    \caption{The *an rhyme in Muishaung}
+    \label{tab:an}
+\end{table}
+````
+
 ## Questions / Help
 
 For any questions regarding formatting or problems that you may be facing with LaTeX in relation to this template, please get in touch with us. Send a message to Kellen at xxx@xxx.xxx with a description of your problem so that we can help you with a solution.
