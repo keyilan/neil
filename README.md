@@ -64,12 +64,12 @@ When possible, use `tikz` for trees.
     \centering
     \begin{tabular}{@{}lllll@{}}
     \toprule
-    gloss		& Needham	& Marrison	& Das Gupta	& modern \\ \midrule
-    iron		& yân		& yan 		& -- 		& ʒan \\
-    plate		& ~			& -- 		& -- 		& pan \\
-    cow			& mân		& -- 		& man 		& man \\
-    bracelet	& sân		& san 		& -- 		& san \\
-    bread		& --		& -- 		& -- 		& βan \\ \bottomrule
+    gloss    & Needham & Marrison & Das Gupta & modern \\ \midrule
+    iron     & yân     & yan      & --        & ʒan \\
+    plate    & ~       & --       & --        & pan \\
+    cow      & mân     & --       & man       & man \\
+    bracelet & sân     & san      & --        & san \\
+    bread    & --      & --       & --        & βan \\ \bottomrule
     \end{tabular}
     \caption{The *an rhyme in Muishaung}
     \label{tab:an}
