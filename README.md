@@ -32,8 +32,8 @@ Glossing is handled with `linguex` and `cgloss`.
 
 ````latex
 \exg.   kaʔ ko nɤ tə-no ʃɯu\\
-		down towards {\textsc{prep}} {\textsc{caus}}-extend.horiz {\textsc{imp}} \\~\\
-		`point [something] downwards' \label{exg}
+        down towards {\textsc{prep}} {\textsc{caus}}-extend.horiz {\textsc{imp}} \\~\\
+        `point [something] downwards' \label{exg}
 ````
 
 #### Trees
@@ -42,18 +42,18 @@ When possible, use `tikz` for trees.
 
 ````latex
 \begin{figure}[htpb!]
-	\centering
-	\begin{tikzpicture}
-		\Tree
-		[.NP
-			[.Det a ]
-			[.N'
-				[.N tree ]
-			]
-		]
-	\end{tikzpicture}
-	\caption{This is a figure made with \texttt{tikz}}
-	\label{firsttree}
+  \centering
+    \begin{tikzpicture}
+    \Tree
+      [.NP
+        [.Det a ]
+        [.N'
+          [.N tree ]
+        ]
+      ]
+    \end{tikzpicture}
+    \caption{This is a figure made with \texttt{tikz}}
+    \label{firsttree}
 \end{figure}
 ````
 
