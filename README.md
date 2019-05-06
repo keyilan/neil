@@ -31,9 +31,9 @@ For a guide on how to write citations in `references.bib`, see [this helpful gui
 Glossing is handled with `linguex` and `cgloss`.
 
 ````latex
-\exg.   kaʔ ko nɤ tə-no ʃɯu\\
-        down towards {\textsc{prep}} {\textsc{caus}}-extend.horiz {\textsc{imp}} \\~\\
-        `point [something] downwards' \label{exg}
+\exg.  kaʔ ko nɤ tə-no ʃɯu\\
+       down towards {\textsc{prep}} {\textsc{caus}}-extend.horiz {\textsc{imp}} \\~\\
+       `point [something] downwards' \label{exg}
 ````
 
 #### Trees
@@ -52,8 +52,8 @@ When possible, use `tikz` for trees.
         ]
       ]
     \end{tikzpicture}
-    \caption{This is a figure made with \texttt{tikz}}
-    \label{firsttree}
+  \caption{This is a figure made with \texttt{tikz}}
+  \label{firsttree}
 \end{figure}
 ````
 
