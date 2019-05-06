@@ -28,10 +28,33 @@ For a guide on how to write citations in `references.bib`, see [this helpful gui
 
 #### Glossing
 
+Glossing is handled with `linguex` and `cgloss`.
+
 ````latex
 \exg.   kaʔ\textsubscript{4} ko\textsubscript{2} nɤ\textsubscript{2} tə\textsubscript{0}-no\textsubscript{1} ʃɯu\textsubscript{1}\\
 		down towards {\textsc{prep}} {\textsc{caus}}-extend.horiz {\textsc{imp}} \\~\\
 		`point [something] downwards' \label{exg}
+````
+
+#### Trees
+
+When possible, use `tikz` for trees.
+
+````latex
+\begin{figure}[htpb!]
+	\centering
+	\begin{tikzpicture}
+		\Tree
+		[.NP
+			[.Det a ]
+			[.N'
+				[.N tree ]
+			]
+		]
+	\end{tikzpicture}
+	\caption{This is a figure made with \texttt{tikz}}
+	\label{firsttree}
+\end{figure}
 ````
 
 ## Questions / Help
