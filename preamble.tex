@@ -69,6 +69,12 @@
 \titleformat{\section}
   {\normalfont\fontsize{12}{12}\bfseries}{\thesection.}{.5em}{}
 \titlespacing{\section}{0em}{1.25em}{1em}
+\titleformat{\subsection}
+  {\normalfont\fontsize{12}{12}\bfseries}{\thesubsection.}{.5em}{}
+\titlespacing{\subsection}{0em}{1.25em}{1em}
+\titleformat{\subsubsection}
+  {\normalfont\fontsize{12}{12}\bfseries}{\thesubsubsection.}{.5em}{}
+\titlespacing{\subsubsection}{0em}{1.25em}{1em}
 
 % enable footnotes
 \usepackage{footnote}
@@ -119,26 +125,34 @@
 	\end{quotation}
 }
 
-% redefine /maketitle
+% zcknowledgements as numbered footnote, not marked with *
 \makeatletter
-\def\@maketitle{
-  \newpage
-  \begin{center}%
-  \let \footnote \thanks
-    {\large \@title \par}
-    \vskip 1em%
-    {\oblique
-      \begin{tabular}[t]{c}
-        \@author
-      \end{tabular}\par}
-%    \vskip 1em
-%    {\small \@date}
-  \end{center}
-  \par
-  \vskip 1em}
+\let\@fnsymbol\@arabic
 \makeatother
 
-% bibliography
+% redefine the \maketitle command
+\makeatletter
+\def\@maketitle{
+	\newpage
+	\begin{center}
+		\let \footnote \thanks
+		{\large \@title}
+		\vskip 1em
+		{
+			\begin{table}[h]
+				\centering \oblique
+				\begin{tabular}[t]{cccccc}
+					& \authlist \\
+					& \affillist
+				\end{tabular}
+			\vskip -1em
+			\end{table}
+		}
+	\end{center}
+	}
+\makeatother
+
+% bibliography settings
 \usepackage[
     backend=biber,
     style=authoryear-icomp,
@@ -151,6 +165,8 @@
 ]{biblatex}
 \addbibresource{references.bib}
 
+\newcommand\code[1]{\texttt{\color[HTML]{2983c2} #1}}
+
 % bibliography patching
 \usepackage{xpatch}
 
@@ -158,6 +174,31 @@
 \renewcommand\autocite[1]{(\citeauthor{#1} \citeyear{#1})}
 %\renewcommand\autocites[1]{(\citeauthor{#1} \citeyear{#1})}
 \renewcommand\cite[1]{\citeauthor{#1} (\citeyear{#1})}
+
+% authors & affiliations side-by-side
+\usepackage{etoolbox}
+\newcommand*{\authorlist}{}
+\newcommand*{\authlist}{\forlistloop{\auth}{\authorlist}}
+\renewcommand\author[1]{\listadd{\authorlist}{#1}}
+\newcommand*{\affiliationlist}{}
+\newcommand*{\affillist}{\forlistloop{\affil}{\affiliationlist}}
+\newcommand\affiliation[1]{\listadd{\affiliationlist}{#1}}
+\newcommand{\auth}[1]{#1 & }
+\newcommand{\affil}[1]{#1 & }
+
+% abbreviations
+\newcommand*{\abbreviationlist}{}
+\newcommand*{\abbreviations}{\forlistloop{\abbr}{\abbreviationlist}}
+\newcommand\abbreviation[2]{\listadd{\abbreviationlist}{\textsc{\MakeLowercase{#1}} & #2}}
+\newcommand{\abbr}[1]{#1 \\}
+\newcommand{\listabbreviations}{
+	\vspace{-1em}
+	\begin{table}[htpb!]
+	    \begin{tabular}{ll}
+		\abbreviations
+	    \end{tabular}
+	\end{table}
+}
 
 % temporary lorem ipsum generator
 \usepackage{lipsum}

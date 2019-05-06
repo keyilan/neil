@@ -1,21 +1,44 @@
 \input{preamble}
 
-% Do not change anything above this line
+% DO NOT CHANGE ANYTHING ABOVE THIS LINE
 
-\title{LaTeX Template for Publication in North East Indian Linguistics\footnote{Acknowledgements appear here.}}
+% Include your paper's title in the \title{} tag:
 
-\author{Kellen Parker van Dam\\La Trobe University}
+\title{\LaTeX\/ Template for Publishing in North East Indian Linguistics\footnote{Acknowledgements appear here.}}
 
-\maketitle
+% Name authors individually in an \author{} tag,
+% followed by that author's affiliation:
+
+\author{Kellen Parker van Dam}
+\affiliation{La Trobe University}
+
+% Each additional author has another set of tags.
+% You may include up to 5 authors.
+
+\author{Zhang San}
+\affiliation{National Tsing Hua University}
+
+
+\maketitle % do not change this line
+\stepcounter{footnote} % do not change this line
+
+% Your abstract should be contained within the following \abstract{} tag:
 
 \abstract{Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. Integer tempus convallis augue. Etiam facilisis. Nunc elementum fermentum wisi. Aenean placerat. Ut imperdiet, enim sed gravida sollicitudin, felis odio placerat quam, ac pulvinar elit purus eget enim. Nunc vitae tortor.}
 
+% Your paper contents begin here, starting with the header
+% for the first section:
+
 \section{Write the first heading here}
 
-\lipsum[1]
+Each section title gets put inside a \code{\textbackslash section\{\}} tag. You can also have \code{\textbackslash subsection\{\}} and \code{\textbackslash subsubsection\{\}} tags for nested sub-sections.
+
+\subsection{This is a subsection}
+
+The numbering for sections and subsections will be handled automatically. You only need to define the text for the section or subsection header.
 
 \begin{quote}
-    This is a block quote, with an included citation \autocite{morey2018verbstemalternation}. In order to preserve formatting, be sure to use the \texttt{quote} environment for blockquotes and not \texttt{quotation}.
+    This is a block quote, contained between \code{\textbackslash begin\{quote\}} and \code{\textbackslash end\{quote\}} tags. In order to preserve formatting, be sure to use the \code{quote} environment for block quotes and not \code{quotation}.
 \end{quote}
 
 \lipsum[5]
@@ -24,7 +47,9 @@
 
 \lipsum[6]
 
-Tables should be centred on the page, with the \texttt{\textbackslash caption\{\}} at the bottom. Captions and alignment of figures should be the same as for table.
+Tables should be centred on the page, with the \code{\textbackslash caption\{\}} at the bottom. Captions and alignment of figures should be the same as for table.\footnote{This is a footnote}
+
+% If you would like help with tables, please see https://www.tablesgenerator.com/, an online tool which lets you easily make tables in a LaTeX format, as below:
 
 \begin{table}[htpb!]
     \centering
@@ -41,27 +66,26 @@ Tables should be centred on the page, with the \texttt{\textbackslash caption\{\
     \label{tab:an}
 \end{table}
 
-Table \ref{tab:an} is using the \texttt{booktabs} style. This may need to be changed since it doesn't currently match the previous Word template design.
+Table \ref{tab:an} is using the \code{booktabs} style. This may need to be changed since it doesn't currently match the previous Word template design.
 
-For syntax trees and other tree diagrams, use \texttt{tikzpicture} within a \texttt{figure} environment:
+For syntax trees and other tree diagrams, use \code{tikzpicture} within a \code{figure} environment:
 
 \begin{figure}[htpb!]
 \centering
 \begin{tikzpicture}
     \Tree
     [.NP
-    [.Det a ]
-    [.N'
-    [.N tree ]
-    ]
+	    [.Det a ]
+	    [.N'
+		    [.N tree ]
+	    ]
     ]
 \end{tikzpicture}
-\caption{This is a figure made with \texttt{tikz}}
+\caption{This is a figure made with \code{tikz}}
 \label{firsttree}
 \end{figure}
 
-
-Images as figures can be done with the \texttt{graphicsx} package. The following is a png image showing a syntax tree.
+Images as figures can be done with the \code{graphicsx} package. The following is a png image showing a syntax tree.
 
 \begin{figure}[htpb!]
     \centering
@@ -75,13 +99,13 @@ Complex figures such as pitch contour diagrams may require additional packages. 
 
 \section{Glossing}
 
-Glossing is handled with the \texttt{linguex} and \texttt{cgloss} packages. Abbreviations should be lowercase and contained in a \texttt{\textbackslash textsc\{\}} tag for small capital letters. The following is from van Dam (\citeyear{vandam2019syntax})
+Glossing is handled with the \code{linguex} and \code{cgloss} packages. Abbreviations should be lowercase and contained in a \code{\textbackslash textsc\{\}} tag for small capital letters. The following is from van Dam (\citeyear{vandam2019syntax})
 
 \exg.   kaʔ\textsubscript{4} ko\textsubscript{2} nɤ\textsubscript{2} tə\textsubscript{0}-no\textsubscript{1} ʃɯu\textsubscript{1}\\
     down towards {\textsc{prep}} {\textsc{caus}}-extend.horiz {\textsc{imp}} \\~\\
     `point [something] downwards' \label{exg}
 
-References to examples/glossing are handled in the same way as figures, for example here referring to Example \ref{exg} above. The \texttt{\textbackslash label\{\}} tag can be placed on any line of the example.
+References to examples/glossing are handled in the same way as figures, for example here referring to Example \ref{exg} above. The \code{\textbackslash label\{\}} tag can be placed on any line of the example.
 
 \section{Conclusion}
 
@@ -91,14 +115,13 @@ Abbreviations are organised in a table environment to maintain spacing:
 
 \section*{Abbreviations}
 
-\vspace{-1em} % for tables immediately following section titles
-\begin{table}[htpb!]
-    \begin{tabular}{ll}
-    \textsc{caus} & Causative prefix \\
-    \textsc{imp} & Imperative marker \\
-    \textsc{prep} & Preposition
-    \end{tabular}
-\end{table}
+% For each abbreviation, you can use the \abbreviation{}{} tag:
+
+\abbreviation{caus}{Causative prefix}
+\abbreviation{imp}{Imperative marker}
+\abbreviation{prep}{Preposition}
+
+\listabbreviations
 
 % Do not change anything below this line
 
