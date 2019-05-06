@@ -24,16 +24,6 @@ It is important that you do not edit any of the files included in the template e
 
 For a guide on how to write citations in `references.bib`, see [this helpful guide](https://www.economics.utoronto.ca/osborne/latex/BIBTEX.HTM).
 
-## Formatting
-
-#### Glossing
-
-````latex
-\exg.   kaʔ\textsubscript{4} ko\textsubscript{2} nɤ\textsubscript{2} tə\textsubscript{0}-no\textsubscript{1} ʃɯu\textsubscript{1}\\
-		down towards {\textsc{prep}} {\textsc{caus}}-extend.horiz {\textsc{imp}} \\~\\
-		`point [something] downwards' \label{exg}
-````
-
 ## Questions / Help
 
 For any questions regarding formatting or problems that you may be facing with LaTeX in relation to this template, please get in touch with us. Send a message to Kellen at xxx@xxx.xxx with a description of your problem so that we can help you with a solution.
